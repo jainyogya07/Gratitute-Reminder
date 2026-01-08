@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+# Pin a Node version Netlify should use. This is a safety net; Netlify also reads .nvmrc
+  NODE_VERSION = "18"
+
+[context.production.environment]
+# ensure consistent Node for production builds
+  NODE_VERSION = "18"
